@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    testImplementation 'io.rest-assured:rest-assured:5.5.0'
+    testImplementation 'org.testng:testng:7.9.0'
+}
+
+
+test {
+//    testClassesDirs = files('src/test/java') // Use an array for multiple directories if needed
+//    include 'Devowelizer/DevowelizerEndpointTest.class'  // Adjust to match your actual test class location
+
+    useTestNG ()
+}
