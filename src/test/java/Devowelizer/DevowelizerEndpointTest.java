@@ -68,14 +68,14 @@ public class DevowelizerEndpointTest extends TestBase{
         Assert.assertEquals(response.getBody().asString(), input, "Response body should be 'knckk'");
     }
 
-    @Test(priority = 5, description = "Validate Special character as input")
+    @Test(priority = 5, description = "Validate special character and space as input")
     public void TC_05() {
-        String input = "!";
+        String input = "!@# *";
         Response response = RestAssured
                 .given()
                 .when()
                 .get("/" + input);
-        Assert.assertEquals(response.getStatusCode(), 500, "Status code should be 500 for special characters");
+        Assert.assertEquals(response.getStatusCode(), 400, "Status code should be 400 for special characters and spacing");
     }
 
     @Test(priority = 6, description = "Validate numerical input")

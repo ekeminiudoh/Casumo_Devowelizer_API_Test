@@ -17,8 +17,8 @@ dependencies {
 
 
 test {
-//    testClassesDirs = files('src/test/java') // Use an array for multiple directories if needed
-//    include 'Devowelizer/DevowelizerEndpointTest.class'  // Adjust to match your actual test class location
+    testClassesDirs = files('src/test/java') // Use an array for multiple directories if needed
+    include 'Devowelizer/DevowelizerEndpointTest.class'  // Adjust to match your actual test class location
 
     useTestNG ()
 }
